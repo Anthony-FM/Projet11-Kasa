@@ -1,0 +1,29 @@
+.MainContainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 159px 0
+}
+
+.ErrorTitle{
+    font-size: 288px;
+    color: #FF6060;
+    font-weight: 700;
+    line-height: 0px;
+}
+
+.ErrorParagraphe{
+    font-size: 36px;
+    color:#FF6060;
+    font-weight: 500;
+    margin-top: 66px;
+}
+
+.ErrorLink{
+    font-size: 18px;
+    color: #FF6060;
+    font-weight: 500;
+    margin-top: 182px;
+}

@@ -1,7 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { createGlobalStyle } from 'styled-components';
 // Mes pages
 import Home from './pages/Home';
 import Error from './pages/Error';
@@ -9,17 +8,16 @@ import FicheLogement from './pages/Logement';
 import APropos from './pages/Apropos';
 // Mes composants
 import Header from './components/Header';
+import Footer from './components/Footer';
+// le style
+import './utils/styles/index.css'
 
-const GlobalStyle = createGlobalStyle`
-    div {
-        font-family: 'Montserrat', Helvetica, sans-serif;
-    }
-`
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <Router>
-      <GlobalStyle/>
+
       <Header/>
       <Routes>
           <Route path="/" element={<Home />} />
@@ -27,9 +25,10 @@ ReactDOM.render(
           <Route path="/a-propos" element={<APropos />} />
           <Route path="*" element={<Error />} />
       </Routes>
+      <Footer/>
 
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
+
 // ****************************************

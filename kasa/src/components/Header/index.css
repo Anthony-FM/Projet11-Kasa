@@ -1,0 +1,23 @@
+.HeaderContainer{
+    margin: 40px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.StyledNav{
+    width: 309px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.StyledLink{ 
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 54px;
+    color: #FF6060
+}
