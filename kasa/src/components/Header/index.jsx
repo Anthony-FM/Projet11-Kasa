@@ -1,14 +1,24 @@
 import logo from '../../assest/LOGO.svg'
 import './index.css'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 
 function Header(){
     return <header className='HeaderContainer'>
         <img src={logo} alt='logo' />
         <nav className='StyledNav'>
-            <Link to="/" className='StyledLink' >Accueil</Link>
-            <Link to="/a-propos" className='StyledLink' >A propos</Link>
+            <NavLink 
+                to="/" 
+                className={({ isActive, isPending }) =>
+                    isPending ? "StyledLink" : isActive ? "StyledLinkActive" : "StyledLink"
+                } > Accueil
+            </NavLink>
+            <NavLink 
+                to="/a-propos" 
+                className={({ isActive, isPending }) =>
+                    isPending ? "StyledLink" : isActive ? "StyledLinkActive" : "StyledLink"
+                } >A Propos
+            </NavLink>
         </nav>
     </header>
     
