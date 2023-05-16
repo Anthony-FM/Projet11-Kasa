@@ -21,10 +21,10 @@ root.render(
 
       <Header/>
       <Routes>
-          <Route path="Projet11-Kasa/" element={<Home />} />
-          <Route path="Projet11-Kasa/fiche-logement" element={<FicheLogement />} />
-          <Route path="Projet11-Kasa//a-propos" element={<APropos />} />
-          <Route path="Projet11-Kasa/*" element={<Error />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/fiche-logement" element={<FicheLogement />} />
+          <Route path="/a-propos" element={<APropos />} />
+          <Route path="*" element={<Error />} />
       </Routes>
       <Footer/>
 
