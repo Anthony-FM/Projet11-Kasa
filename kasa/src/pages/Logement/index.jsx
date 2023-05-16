@@ -10,18 +10,21 @@ import Rating from "../../components/Rating";
 import Dropdown from "../../components/Dropdowns";
 
 function Logement(){
-    let params = (new URL(document.location)).searchParams;
-    let id = params.get('id');
+    let params = window.location.hash;
+    const id = params.split("id=").at(-1)
+
     // state
     let [housesData, setData] = useState(null);
    
     
     useEffect(() => {
-        fetch('../datas/index.json')
+        fetch('./datas/index.json')
        .then((res) => res.json())
        .then((data) =>  setData(data.filter( data => data.id === id)[0]))       
        .catch((error) => console.log('====='+ error))              
     }, [id])
+
+    console.log(housesData+'  '+id)
     
     
     
@@ -31,7 +34,9 @@ function Logement(){
             
         </div>
         
-    ) : housesData === undefined ?  (<div><Navigate to="*" replace={true} /></div>) : ( 
+    ) 
+    : housesData === undefined ?  (<div><Navigate to="*" replace={true} /></div>) 
+    : ( 
         
         <section>
             <Slider 
@@ -44,7 +49,10 @@ function Logement(){
                         
                         <h1 className="houseTitle">{housesData.title}</h1>   
                         <p className="houseLocation">{housesData.location}</p>      
-                        <Tags tags={housesData.tags} id={housesData.id}/> 
+                        <Tags 
+                            tags={housesData.tags} 
+                            id={housesData.id}
+                        /> 
                         
                     </div>        
 

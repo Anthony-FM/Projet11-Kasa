@@ -1,7 +1,3 @@
-
-// import dataHousing from '../../datas/index.json' // Test dans src
-// import dataHousing from '../../../datas/index.json' // Test dans public
-// import DataHousing from "../../components/DataHousing" // Test dans un autree component
 import { useEffect, useState } from "react"
 import Card from "../../components/Card";
 import './index.css'
@@ -12,7 +8,7 @@ function Home(){
 
     const [houseData, setData] = useState([]);
     useEffect(() => {
-         fetch('../datas/index.json')
+         fetch('./datas/index.json')
         .then((res ) => res.json())
         .then((data) => setData(data))
         .catch((error) => console.log(error))      

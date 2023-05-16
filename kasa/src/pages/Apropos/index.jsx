@@ -7,7 +7,7 @@ function Apropos(){
     let [ Apropos, setApropos] = useState(undefined)
 
     useEffect(() => {
-        fetch('../datas/Apropos.json')
+        fetch('./datas/Apropos.json')
        .then((res) => res.json())
        .then((data) => setApropos(data))
        .catch((error) => console.log('====='+ error))              
