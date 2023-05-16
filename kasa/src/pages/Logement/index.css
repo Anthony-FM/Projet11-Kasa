@@ -1,0 +1,106 @@
+.houseContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.houseIntroContainer{
+    display: flex;
+    flex-direction: column;
+}
+.houseIntro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.houseTitle{
+    font-weight: 500;
+    font-size: 36px;
+    color: #FF6060;
+}
+.houseLocation{
+    font-weight: 500;
+    font-size: 18px;
+    color: #FF6060;
+    margin-top: 0;
+}
+
+.houseHost{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.houseHostImg{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.houseHostName{
+    font-weight: 500;
+    font-size: 18px;
+    color: #FF6060;
+    text-align: right;
+    width: 50%;
+    margin-right: 10px;
+    line-height: 140%;
+}
+
+.hostNratingContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.dropdownContainer{        
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 76px;
+}
+@media screen and (max-width: 1100px){
+    .dropdownContainer{
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .dropdownContainer{
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+
+    .houseContainer{
+        flex-direction: column;
+        margin: 15px 0;
+    }
+
+    .houseLocation{
+        font-size: 14px;
+    }
+    .houseTitle{
+        font-size: 18px;
+    }
+
+    .hostNratingContainer{
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .houseHostName{
+        font-size: 12px;
+    }
+    .houseHostImg{
+        width: 32px;
+        height: 32px;
+    }
+    .dropdownContainer{
+        grid-gap: 0px;
+    }
+    
+}

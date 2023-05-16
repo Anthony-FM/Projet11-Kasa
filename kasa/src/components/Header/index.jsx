@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom'
 
 function Header(){
     return <header className='HeaderContainer'>
-        <img src={logo} alt='logo' />
+        <img src={logo} alt='logo' className='imgHeader'/>
         <nav className='StyledNav'>
             <NavLink 
                 to="/" 

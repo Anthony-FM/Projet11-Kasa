@@ -1,0 +1,13 @@
+.AproposContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+    .AproposContainer{
+        width: 100%;
+    }
+}

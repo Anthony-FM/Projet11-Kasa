@@ -27,3 +27,65 @@
     font-weight: 500;
     margin-top: 182px;
 }
+
+@media screen and (max-width: 1200px) {
+    .ErrorTitle{
+        font-size: 200px;
+    }
+    .ErrorParagraphe{
+        
+        margin-top: 56px;
+    }
+
+    .ErrorLink{        
+        margin-top: 140px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .ErrorTitle{
+        font-size: 180px;
+    }
+    .ErrorParagraphe{
+        
+        margin-top: 48px;
+        font-size: 30px;
+    }
+
+    .ErrorLink{        
+        margin-top: 120px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .ErrorTitle{
+        font-size: 140px;
+    }
+    .ErrorParagraphe{
+        
+        margin-top: 40px;
+        font-size: 24px;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .ErrorLink{        
+        margin-top: 80px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .ErrorTitle{
+        font-size: 96px;
+    }
+    .ErrorParagraphe{
+        
+        margin-top: 11px;
+        font-size: 18px;
+    }
+
+    .ErrorLink{        
+        margin-top: 133px;
+        font-size: 14px;
+    }
+}

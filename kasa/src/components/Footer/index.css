@@ -20,3 +20,21 @@
     font-size: 24px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 600px) {
+    .StyledParagraphe {
+        font-size: 18px;
+    }
+    .StyledFooter {
+        
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .StyledParagraphe {
+        font-size: 12px;
+    }
+    
+}
