@@ -13,13 +13,14 @@ function Logement(){
     let { id } = useParams();   
     // let params = window.location.href;
     // const id = params.split("id=").at(1)
+    console.log(id)
 
     // state
     let [housesData, setData] = useState(null);
    
-    
+    console.log(housesData)
     useEffect(() => {
-        fetch('../datas/index.json')
+        fetch('./datas/index.json')
        .then((res) => res.json())
        .then((data) =>  setData(data.filter( data => data.id === id)[0]))       
        .catch((error) => console.log('====='+ error))              
@@ -79,8 +80,6 @@ function Logement(){
                     listEquipment={housesData.equipments}
                     name='Équipements'/>
             </div>
-            
-            
     
         </section>            
         ) 
