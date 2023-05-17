@@ -1,6 +1,6 @@
 // React
 import { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 // Style
 import './index.css'
 //Composants
@@ -10,23 +10,21 @@ import Rating from "../../components/Rating";
 import Dropdown from "../../components/Dropdowns";
 
 function Logement(){
-    let params = window.location.hash;
-    const id = params.split("id=").at(-1)
+    let { id } = useParams();   
+    // let params = window.location.href;
+    // const id = params.split("id=").at(1)
 
     // state
     let [housesData, setData] = useState(null);
    
     
     useEffect(() => {
-        fetch('./datas/index.json')
+        fetch('../datas/index.json')
        .then((res) => res.json())
        .then((data) =>  setData(data.filter( data => data.id === id)[0]))       
        .catch((error) => console.log('====='+ error))              
     }, [id])
 
-    console.log(housesData+'  '+id)
-    
-    
     
     return housesData === null ? (
         <div>

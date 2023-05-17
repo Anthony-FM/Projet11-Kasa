@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import {  Route, Routes } from 'react-router-dom'
 
 //Mes pages
@@ -23,7 +23,7 @@ root.render(
       <Header/>
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/fiche-logement" element={<FicheLogement />} />
+          <Route path="/fiche-logement/:id" element={<FicheLogement />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="*" element={<Error />} />
       </Routes>
