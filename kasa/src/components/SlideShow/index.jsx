@@ -28,8 +28,10 @@ function Slider({ pictures, houseName}){
                     alt='chevron gauche'
                     className='arrow'
                 />
+                
             </div>
             <img src={pictures[picturesIndex]} alt={`${houseName} images ${picturesIndex + 1}`} className="sliderImg"/>
+            <p className='slideLength'>{picturesIndex + 1}/{pictures.length}</p>
             <div onClick={() => next(picturesIndex)} className='nextArrow'>
                 <img 
                     src={right} 
