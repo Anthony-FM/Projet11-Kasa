@@ -1,5 +1,8 @@
+// Assets
 import logo from '../../assest/LOGO.svg'
+// CSS
 import './index.css'
+// React Router
 import {NavLink} from 'react-router-dom'
 
 

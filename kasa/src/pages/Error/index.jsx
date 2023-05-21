@@ -1,5 +1,7 @@
-import './index.css'
+// React Router
 import { Link } from "react-router-dom"
+// Css
+import './index.css'
 
 
 function Error(){

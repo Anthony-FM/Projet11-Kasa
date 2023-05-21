@@ -1,4 +1,6 @@
+// CSS
 import './index.css'
+// Assets
 import Pink from '../../assest/pink-star.svg'
 import Grey from '../../assest/grey-star.svg'
 

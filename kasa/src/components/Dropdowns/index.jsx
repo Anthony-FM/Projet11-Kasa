@@ -1,5 +1,8 @@
+// CSS
 import './index.css'
+// Assets
 import arrow from '../../assest/arrow.svg'
+// React
 import { useState } from 'react'
 
 function Dropdown({paragraphe, listEquipment, name}){

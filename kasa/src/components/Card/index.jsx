@@ -1,4 +1,6 @@
+// CSS
 import './index.css'
+// React Router
 import { Link } from 'react-router-dom'
 
 function Card({id, title, cover}){

@@ -1,4 +1,6 @@
+// Assets
 import logo from '../../assest/LOGO-blanc.svg'
+// CSS
 import './index.css'
 
 

@@ -1,5 +1,8 @@
+// CSS
 import './index.css'
+// React
 import { useState } from 'react';
+// Assets
 import right from '../../assest/chevron-right.png'
 import left from '../../assest/chevron-left.png'
 
