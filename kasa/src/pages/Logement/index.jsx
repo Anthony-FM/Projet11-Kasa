@@ -8,6 +8,7 @@ import Slider from "../../components/SlideShow";
 import Tags from "../../components/Tags";
 import Rating from "../../components/Rating";
 import Dropdown from "../../components/Dropdowns";
+import Loader from "../../components/Loader";
 
 function Logement(){
     let { id } = useParams();   
@@ -28,11 +29,7 @@ function Logement(){
 
     
     return housesData === null ? (
-        <div>
-            Loading... 
-            
-        </div>
-        
+        <Loader/>        
     ) 
     : housesData === undefined ?  (<div><Navigate to="*" replace={true} /></div>) 
     : ( 

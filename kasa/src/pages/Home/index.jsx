@@ -1,6 +1,11 @@
+// React
 import { useEffect, useState } from "react"
+// Composant
 import Card from "../../components/Card";
+import Loader from "../../components/Loader";
+// Style
 import './index.css'
+// assets
 import IMG from "../../assest/IMG.jpg"
 
 
@@ -14,6 +19,8 @@ function Home(){
         .catch((error) => console.log(error))      
 
     }, [])
+
+    console.log(houseData)
 
     let liHouse = houseData.map(({id, title, cover, index}) => (
         <li key={id} className="liCardContainer">
@@ -31,9 +38,18 @@ function Home(){
             <h1 className="imgCoverTitle">Chez vous, partout et ailleurs</h1>
 
         </div>
-        <ul className="cardContainer">
-            {liHouse}
-        </ul>
+            
+        { 
+            houseData.length === 0 ?
+            (<Loader/> )
+             : 
+            (
+            <ul className="cardContainer">
+                {liHouse}
+            </ul>
+            )
+        }
+            
     </section>
 }
 

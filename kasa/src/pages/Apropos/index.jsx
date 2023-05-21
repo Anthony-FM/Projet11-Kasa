@@ -1,7 +1,12 @@
-import './index.css'
-import IMG from '../../assest/imgApropos.png'
-import Dropdown from '../../components/Dropdowns'
+//React
 import { useState, useEffect } from 'react'
+// CSS
+import './index.css'
+// Assets
+import IMG from '../../assest/imgApropos.png'
+// Composants
+import Dropdown from '../../components/Dropdowns'
+import Loader from '../../components/Loader'
 
 function Apropos(){
     let [ Apropos, setApropos] = useState(undefined)
@@ -14,7 +19,7 @@ function Apropos(){
     }, [])
 
     
-    return Apropos === undefined ? (<div> Loading...</div>):(<section>
+    return Apropos === undefined ? (<Loader/>):(<section>
         <div className="imgCoverContainer">
             <img src={IMG} alt="Paysage montagneuse" className="imgCover"/>
 
