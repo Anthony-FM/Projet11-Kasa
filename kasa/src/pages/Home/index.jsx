@@ -20,13 +20,12 @@ function Home(){
 
     }, [])
 
-    let liHouse = houseData.map(({id, title, cover, index}) => (
+    let liHouse = houseData.map(({id, title, cover}) => (
         <li key={id} className="liCardContainer">
             <Card 
             id={id}
             title= {title}
-            cover= {cover}
-            index={index}/>
+            cover= {cover}/>
         </li>
     ))
 
