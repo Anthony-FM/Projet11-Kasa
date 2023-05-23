@@ -127,12 +127,20 @@
         height: 111px;   
         border-radius: 10px;   
         margin-bottom: 20px; 
+        
     }
 
     .imgCover{        
         border-radius: 10px;
     }
     .imgCoverTitle{
-        font-size: 24px;    
+        font-size: 24px;
+        margin: 16px; 
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .imgCoverContainer{
+        justify-content: flex-start;        
     }
 }
