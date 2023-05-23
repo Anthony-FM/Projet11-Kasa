@@ -11,15 +11,11 @@ import Dropdown from "../../components/Dropdowns";
 import Loader from "../../components/Loader";
 
 function Logement(){
-    let { id } = useParams();   
-    // let params = window.location.href;
-    // const id = params.split("id=").at(1)
-    console.log(id)
+    let { id } = useParams();  
 
     // state
     let [housesData, setData] = useState(null);
    
-    console.log(housesData)
     useEffect(() => {
         fetch('./datas/index.json')
        .then((res) => res.json())

@@ -20,8 +20,6 @@ function Home(){
 
     }, [])
 
-    console.log(houseData)
-
     let liHouse = houseData.map(({id, title, cover, index}) => (
         <li key={id} className="liCardContainer">
             <Card 
