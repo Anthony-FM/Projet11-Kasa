@@ -30,25 +30,15 @@ function Dropdown({paragraphe, listEquipment, name}){
     }
     
 
-    return liEquipements ? (<div className='dropdown-container'>
-        <div className='dropdown-button' onClick={() => openTheDropdown()} >
-            <h2 className='dropdown-title'> {name}</h2>
-            <img src={arrow}  alt='arrow' className={arrowStyle}/>
-        </div>
-        <div className={componentStyle}>
-            {list}
-        </div>
-        </div>) : (
-            <div className='dropdown-container'>
-                <div className='dropdown-button' onClick={() => openTheDropdown()} >
-                    <h2 className='dropdown-title'> {name}</h2>
-                    <img src={arrow}  alt='arrow' className={arrowStyle}/>
-                </div>
-                <div className={componentStyle}>
-                    {paragraphe}
+    return <div className='dropdown-container'>
+            <div className='dropdown-button' onClick={() => openTheDropdown()} >
+                <h2 className='dropdown-title'> {name}</h2>
+                <img src={arrow}  alt='arrow' className={arrowStyle}/>
             </div>
-            </div>)
-        
+            <div className={componentStyle}>
+                {paragraphe} {list}
+            </div>
+        </div> 
     
 }
 
